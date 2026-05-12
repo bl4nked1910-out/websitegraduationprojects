@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belinda | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --primary: #6C63FF;
+      --secondary: #00C9A7;
+      --light: #f7f8fc;
+      --dark: #1e1e2f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 40px 60px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom right, #eef2ff, #ffffff);
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 500px;
+      opacity: 0.7;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--secondary);
+    }
+
+    h2.section-title {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 5px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .card a {
+      position: absolute;
+      inset: 0;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media(max-width:600px){
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Belinda</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#video">Tutorial</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Hi, I'm Belinda 👋</h2>
+  <p>I create fun, creative, and interactive web projects. Explore my work below.</p>
+  <a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">My Projects</h2>
+
+  <div class="gallery">
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=1" alt="Project">
+      <div class="card-content">
+        <h3>Dance Website</h3>
+        <p>A fun project about dancing and creativity.</p>
+      </div>
+      <a href="https://belindayi2014-dev.github.io/fantastic-party-/" target="_blank"></a>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Project">
+      <div class="card-content">
+        <h3>Project Two</h3>
+        <p>Describe your project here.</p>
+      </div>
+      <a href="https://belindayi2014-dev.github.io/design247/"></a>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Project">
+      <div class="card-content">
+        <h3>Project Three</h3>
+        <p>Describe your project here.</p>
+      </div>
+      <a href="#"></a>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Project">
+      <div class="card-content">
+        <h3>Project Three</h3>
+        <p>Describe your project here.</p>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <h2 style="text-align:center; margin-bottom:20px;">Tutorial Video</h2>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  © 2026 Belinda | Portfolio
+</footer>
+
+</body>
+</html>

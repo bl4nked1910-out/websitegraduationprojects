@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shnight's Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #BF40BF;
+        color: #000;
+    }
+
+    /* HEADER */
+    header {
+        background: #000;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 4px solid #800020;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #800020;
+    }
+
+    /* SECTIONS */
+    section {
+        display: none;
+        padding: 40px;
+        text-align: center;
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #800020;
+    }
+
+    /* GALLERY */
+    .gallery { 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border: 3px solid #000;
+    }
+
+     <h2>My Gallery</h2>
+
+    <div class="gallery">
+        <img src="image1.jpg" alt="Picture 1">
+        <img src="image2.jpg" alt="Picture 2">
+        <img src="image3.jpg" alt="Picture 3">
+        <img src="image4.jpg" alt="Picture 4">
+    </div>
+
+
+    /* VIDEO */
+    .video-container { song with cool rap vibes
+        margin-top: 20px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 400px;
+        border: 3px solid #000;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-top: 4px solid #800020;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Shight's Portfolio</h1>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('gallery')">Gallery</a>
+        <a href="#" onclick="showSection('video')">Video</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <h2>Home</h2>
+    <p>This is my portfollio, for my last project.</p>
+    <p>I like to post about my interests and videos.</p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://static.wikia.nocookie.net/pplaytime/images/c/c8/Mob_Side_Out.jpg/revision/latest/scale-to-width-down/250?cb=20260227024348" alt="Image 1">
+        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817490/a188e395ba419de1e25b458febddc3fc4852a343/capsule_616x353.jpg?t=1770858209/300" alt="Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9MyZlY1_KntHGeDyGdLVvhV8U_bIJU2ntA&sS/300" alt="Image 3">
+        <img src="https://poppyplaytime.wiki.gg/images/thumb/SmillingCrittersHeaderLogoHD.png/640px-SmillingCrittersHeaderLogoHD.png?a05e03/300" alt="Image 4">
+    </div>
+</section>
+
+<section id="video">
+    <h2>Video</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://rr2---sn-h5mpn-30a6.googlevideo.com/videoplayback?expire=1777717249&ei=oXv1aYnoEaeBi9oP-LrjgQc&ip=2a12%3Aef86%3Aa022%3Ae135%3A47f5%3Afac8%3A86ca%3A3787&id=o-AJ132XMkG799bz7_J3XJQuuYLGEyKFlJdEPofPlke3cQ&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=AbKmrwqY4zAg6070zEIUj-0JGGF0aVqjOr9OTrhedV56fdAD9J5IC2OnV3k85sj6F-miWSO_Sho86Qa5&spc=96Xrv_C6ggCqqZj1Xh42W5lbhy6pBxInlBuSHj9YTVnt-riQN7Ar&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=1130407&ratebypass=yes&dur=15.061&lmt=1775044141449070&fexp=51565116,51565681&c=ANDROID_VR&txp=6300224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AHEqNM4wRQIhAJsDtx4Mw5zNQQf2DrjTK-9U78laAbXHILa-6yXIcnV0AiAKtW_yi_PhzLFUdOExC1QFHPTgrqcLWQ4CqBtsLTBrFw%3D%3D&title=1%20April%202026&redirect_counter=1&rm=sn-hgnld7e&rrc=104&req_id=a2799310546a3ee&cms_redirect=yes&cps=73&ipbypass=yes&met=1777695662,&mh=tR&mip=2001:d08:e6:7dcf:fcf8:dbf1:9840:bcb3&mm=31&mn=sn-h5mpn-30a6&ms=au&mt=1777695170&mv=m&mvi=2&pl=52&lsparams=cps,ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhANwu5CP50zXLD2Rjw-CS6avjBHLA8J6HxTbmG4F9sVNWAiEAzALR0YVY1XwL0pGa1i8I7LOfMLxRpe4ANvL_-7o1ggA%3D"
+            width="560" 
+            height="315"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio</p>
+</footer>
+
+<script>
+function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+}
+</script>
+
+</body>
+</html>

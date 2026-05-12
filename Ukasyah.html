@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pure Football — Game Developer Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+    color: #7fffd4;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+p {
+    opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #7fffd4;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,255,170,0.3);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #00ffaa;
+}
+
+/* SECTIONS */
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 25px 0;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(127,255,212,0.15), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border: 1px solid rgba(127,255,212,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(127,255,212,0.2);
+    color: #7fffd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: #7fffd4;
+    color: black;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 10px 20px;
+    background: rgba(127,255,212,0.2);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #7fffd4;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+}
+
+/* FLOATING BUBBLES */
+.bubble {
+    position: fixed;
+    bottom: -50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    animation: float linear infinite;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+.card::before {
+    pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+</nav>
+
+<!-- HERO -->
+<header>
+    <h1>Pure Football</h1>
+    <p>Calm Football Experience</p>
+    <p>by Ukasyah</p>
+    <button class="btn" onclick="scrollToProjects()">View Projects</button>
+</header>
+
+<!-- MAIN -->
+<main>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I build immersive, relaxing game experiences that combine
+            fluid gameplay with calm environments. Inspired by spa aesthetics
+            and football mechanics, I focus on creating flow-state gameplay.
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2> My Previous Projects</h2>
+
+    <div class="card">
+        <h3>Gadget Store</h3>
+        <p>A project showcasing my design for a phone repair shop.</p>
+        <a class="card-btn"
+   href="https://ukasyah2517.github.io/GadgetStore/"
+   target="_blank"
+   rel="noopener noreferrer">
+   Launch Project →
+</a>
+    </div>
+
+    <div class="card">
+        <h3>Seasonal Discount</h3>
+        <p>My design for discount on fireworks</p>
+        <a class="card-btn"
+   href="https://ukasyah2517.github.io/FantasticParty/"
+   target="_blank"
+   rel="noopener noreferrer">
+   Launch Project →
+</a>
+    </div>
+
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Game Design</div>
+        <div class="skill">UI/UX</div>
+        <div class="skill">Animation</div>
+        <div class="skill">Physics Systems</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="contacts">contacts</div>
+       <p> Phone number: 016-725-3467</p>
+    <p>© 2026 Pure Football Portfolio</p>
+</footer>
+
+<script>
+function scrollToProjects() {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+
+/* Floating bubbles */
+for (let i = 0; i < 20; i++) {
+    let bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.style.left = Math.random() * 100 + "vw";
+    bubble.style.animationDuration = (5 + Math.random() * 5) + "s";
+    let size = (10 + Math.random() * 20) + "px";
+    bubble.style.width = size;
+    bubble.style.height = size;
+    document.body.appendChild(bubble);
+}
+</script>
+
+</body>
+</html>

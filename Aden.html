@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me & My Hobby - Aircraft</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #00509e;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Personal Website</h1>
+    <p>About Me & My Hobby: Aircraft</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('page1')">About Me</a>
+    <a href="#" onclick="showPage('page2')">My Hobby</a>
+    <a href="#" onclick="showPage('page3')">Favorite Aircraft</a>
+  </nav>
+
+  <!-- Page 1 -->
+  <section id="page1" class="active">
+    <h2>About Me</h2>
+    <p>Hello! My name is [Aden Avinash]. I am passionate about learning new things and exploring technology. One of my biggest interests is aircraft and aviation.</p>
+    
+    <p>I enjoy studying how airplanes work, different aircraft models, and the history of aviation. I believe aircraft represent one of the greatest achievements of human engineering.</p>
+
+    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05" alt="Aircraft">
+  </section>
+
+  <!-- Page 2 -->
+  <section id="page2">
+    <h2>My Hobby: Aircraft</h2>
+    <p>My hobby is learning about aircraft. I love reading about airplanes, watching aviation documentaries, and following the latest developments in aviation technology.</p>
+
+    <p>I am especially interested in commercial jets, military aircraft, and private jets. I also enjoy flight simulators and plane spotting at airports.</p>
+
+    <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3" alt="Plane Hobby">
+  </section>
+
+  <!-- Page 3 -->
+  <section id="page3">
+    <h2>My Favorite Aircraft</h2>
+    <p>One of my favorite aircraft is the Boeing 747 because of its iconic design and importance in aviation history.</p>
+
+    <p>I also admire the Airbus A380 for its size and engineering, as well as fighter jets like the F-22 Raptor for their speed and advanced technology.</p>
+
+    <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad" alt="Favorite Aircraft">
+  </section>
+
+  <footer>
+    <p>&copy; 2026 My Aircraft Website</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      let pages = document.querySelectorAll("section");
+      pages.forEach(page => {
+        page.classList.remove("active");
+      });
+
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

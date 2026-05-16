@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Designer Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(192, 122, 122, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #3b3434;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 40px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #bbb;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .filters {
+      margin-top: 20px;
+    }
+
+    .filters button {
+      margin-right: 10px;
+      padding: 8px 15px;
+      background: transparent;
+      border: 1px solid #555;
+      color: #aaa;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filters button.active,
+    .filters button:hover {
+      color: #9e6767;
+      border-color: #946a6a;
+    }
+
+    .about, .contact {
+      max-width: 700px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #996e6e;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SHMAYA</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#art">Art</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>My art & Design</h2>
+  <p>Hello! My name is Shmaya, my goal is to inspire and motivate people thrpugh my art. 
+    Thank you for supporting me.
+  </p>
+</section>
+
+<section id="art">
+  <h2>Selected Works</h2>
+
+  <div class="filters">
+    <button class="active" onclick="filterSelection('all')">All</button>
+    <button onclick="filterSelection('branding')">Branding</button>
+    <button onclick="filterSelection('art')">Art</button>
+    <button onclick="filterSelection('ui')">UI</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20kzq-f92ec6e5-a625-48be-be72-0109d62dfb81.jpg/v1/fit/w_300,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_24_pm__1__by_studentwork_dm20kzq-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDA5IiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwa3pxLWY5MmVjNmU1LWE2MjUtNDhiZS1iZTcyLTAxMDlkNjJkZmI4MS5qcGciLCJ3aWR0aCI6Ijw9ODU3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.c9q57Aw3w33JEa0KewvGWdMG4n4u0vJS2u_ATpJ9Uwc" data-category="branding">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20kzf-566a072b-eca4-4484-aaf3-5a90d0fc7860.jpg/v1/fit/w_300,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_24_pm_by_studentwork_dm20kzf-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwa3pmLTU2NmEwNzJiLWVjYTQtNDQ4NC1hYWYzLTVhOTBkMGZjNzg2MC5qcGciLCJ3aWR0aCI6Ijw9NDAzIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.qSRuvnUJWFESacSaM02TpspVUF7vjAR7mc78IkKjRDU" data-category="art">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20l0u-8b7d8f26-befb-47b2-891e-09e80cbdcdd4.jpg/v1/fit/w_300,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_21_pm__1__by_studentwork_dm20l0u-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTIxIiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwbDB1LThiN2Q4ZjI2LWJlZmItNDdiMi04OTFlLTA5ZTgwY2JkY2RkNC5qcGciLCJ3aWR0aCI6Ijw9MzgxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.gESkNyhOHgcV76rwdQahmvXZCQeTdbzwMKMjXt0oHj8" data-category="ui">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20l0n-88079865-97f1-4429-b221-2d82365341fe.jpg/v1/fit/w_300,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_21_pm_by_studentwork_dm20l0n-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY2IiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwbDBuLTg4MDc5ODY1LTk3ZjEtNDQyOS1iMjIxLTJkODIzNjUzNDFmZS5qcGciLCJ3aWR0aCI6Ijw9NDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ZuguNXCDRTM6hAscSahoAWLMoz1s49pYJOp3TFM5Yt8" data-category="art">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20l01-8adfe396-d6a0-4789-a1a6-1e672b4438d0.jpg/v1/fit/w_300,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_23_pm_by_studentwork_dm20l01-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDU4IiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwbDAxLThhZGZlMzk2LWQ2YTAtNDc4OS1hMWE2LTFlNjcyYjQ0MzhkMC5qcGciLCJ3aWR0aCI6Ijw9NTY5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.4OHViOu8afpYYcqDqCIDze8MfITm45dj62-wNxXvY9o" data-category="branding">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a87f6f46-883f-4ccd-ba2d-4d055e99cfa2/dm20kz4-cefe5a8c-74d0-4773-bfb5-eadf59366f4c.jpg/v1/fit/w_277,h_300,q_70,strp/whatsapp_image_2026_04_25_at_1_45_25_pm__2__by_studentwork_dm20kz4-150-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDM5IiwicGF0aCI6Ii9mL2E4N2Y2ZjQ2LTg4M2YtNGNjZC1iYTJkLTRkMDU1ZTk5Y2ZhMi9kbTIwa3o0LWNlZmU1YThjLTc0ZDAtNDc3My1iZmI1LWVhZGY1OTM2NmY0Yy5qcGciLCJ3aWR0aCI6Ijw9Mjc3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.8QdHkUCN8ts0FniiZmLZPk_YxeLfzYKJkoLKAUBAI7Q" data-category="ui">
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I live in Malaysia and I'm 14 years old. My hobbies are singing,
+    playing the guitar, and drawing - doing anything related to art.
+    If you coould share any ideas on how to improve my art. Please
+    contact me.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: Shmaya.bluberry@gmail.com</p>
+  <p>Tiktok: @candiizr</p>
+</section>
+
+<footer>
+  © 2026 Shmaya
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="preview">
+</div>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Filter gallery
+  function filterSelection(category) {
+    const images = document.querySelectorAll('.gallery img');
+    const buttons = document.querySelectorAll('.filters button');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    images.forEach(img => {
+      if (category === 'all' || img.dataset.category === category) {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+    });
+  }
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
